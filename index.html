@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <!-- sound cloud -->
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+    <script>
+    SC.initialize({
+      client_id: 'YOUR_CLIENT_ID',
+      redirect_uri: 'http://example.com/callback'
+    });
+
+    // initiate auth popup
+    SC.connect().then(function() {
+      return SC.get('/me');
+    }).then(function(me) {
+      alert('Hello, ' + me.username);
+    });
+    </script>
+    
+    <!-- sources -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="boostrap-css" charset="utf-8">
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" media="screen" title="fontawesome-css" charset="utf-8">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+    	<div class="col-xs-4">one</div>
+    	<div class="col-xs-4"><i class="fa fa-hand-peace-o"></i> two</div>
+    	<div class="col-xs-4">three</div>
+    </div>
+</div>
+</body>
+</html>
