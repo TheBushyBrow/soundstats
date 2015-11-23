@@ -3,9 +3,8 @@ SC.initialize({
     redirect_uri: 'http://thebushybrow.github.io/soundstats/callback.html'
 });
 
-// update user's profile description
 $(document).ready(function() {
-  SC.get('/tracks', { genres: 'trap' }, function(tracks) {
+  SC.get('/tracks', { genres: 'rap' }, function(tracks) {
     $(tracks).each(function(index, track) {
       $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
     });
