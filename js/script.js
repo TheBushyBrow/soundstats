@@ -3,13 +3,11 @@ SC.initialize({
     redirect_uri: 'http://thebushybrow.github.io/soundstats/callback.html'
 });
 
+// update user's profile description
 $(document).ready(function() {
-  $('.connect').click(function(e) {
-    e.preventDefault();
-    SC.connect(function() {
-      SC.get('/me', function(me) {
-        $('#username').html(me.username);
-      });
+  SC.get('/tracks', { genres: 'trap' }, function(tracks) {
+    $(tracks).each(function(index, track) {
+      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
     });
   });
 });
