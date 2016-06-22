@@ -28,7 +28,6 @@ Retrieves list of tracks, and displays a list with links to the tracks showing '
      }
  });
  
- 
  // initiate auth popup
  SC.connect().then(function() {
    return SC.get('/me');
