@@ -27,3 +27,11 @@ Retrieves list of tracks, and displays a list with links to the tracks showing '
          $("<li/>").html(tmp).appendTo("#track-list");
      }
  });
+ 
+ 
+ // initiate auth popup
+ SC.connect().then(function() {
+   return SC.get('/me');
+ }).then(function(me) {
+   alert('Hello, ' + me.username);
+ });
