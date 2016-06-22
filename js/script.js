@@ -1,6 +1,6 @@
 SC.initialize({
     client_id: "b301c8470ec1bde5474c91bfda3dc58b",
-    redirect_uri: "http://johnnyedick.com/callback.html",
+    redirect_uri: "http://thebushybrow.github.io/soundstats/callback.html",
 });
 
 /**
